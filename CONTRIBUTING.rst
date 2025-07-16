@@ -63,7 +63,7 @@ You can run the tests yourself using:
 
       $ cyclus_unit_tests
 
-  - for Cycamore:
+  - for Recycle:
 
     .. code-block:: bash
 
@@ -95,21 +95,21 @@ three branches: "Master", "Develop", and "Work".
 Acquiring Cyclus and Workflow
 -----------------------------
 
-We begin with a fork of the main ("blessed") Cyclus repository. After initially forking
+We begin with a fork of the main ("blessed") Recycle repository. After initially forking
 the repo, we will have two branches in our fork: "Master" and "Develop".
 
-Acquiring a Fork of the Cyclus Repository
+Acquiring a Fork of the Recycle Repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A fork is *your* copy of Cyclus. Github offers an excellent
+A fork is *your* copy of Recycle. Github offers an excellent
 `tutorial <http://help.github.com/fork-a-repo/>`_ on how to set one up. The rest of this
-example assumes you have set up the "upstream" repository as ``cyclus/core``. Note that git
+example assumes you have set up the "upstream" repository as ``recycle/core``. Note that git
 refers to your fork as "origin".
 
 First, let's make our "work" branch:
 ::
-    .../cyclus_dir/$ git branch work
-    .../cyclus_dir/$ git push origin work
+    .../recycle_dir/$ git branch work
+    .../recycle_dir/$ git push origin work
 
 We now have the following situation: there exists the "blessed" copy of the Master and
 Develop branches, there exists your fork's copy of the Master, Develop, and Work branches,
@@ -128,14 +128,14 @@ work, finished, and successfully pushed your changes to your *Origin*
 repository. You are now at home and want to continue working a bit. To begin,
 let's update our *home's local branches*.  ::
 
-    .../cyclus_dir/$ git checkout master
-    .../cyclus_dir/$ git pull upstream master
-    .../cyclus_dir/$ git push origin master
+    .../recycle_dir/$ git checkout master
+    .../recycle_dir/$ git pull upstream master
+    .../recycle_dir/$ git push origin master
 
-    .../cyclus_dir/$ git checkout work
-    .../cyclus_dir/$ git pull origin work
-    .../cyclus_dir/$ git rebase master
-    .../cyclus_dir/$ git push origin work
+    .../recycle_dir/$ git checkout work
+    .../recycle_dir/$ git pull origin work
+    .../recycle_dir/$ git rebase master
+    .../recycle_dir/$ git push origin work
 
 Perhaps a little explanation is required. We first want to make sure that this new local copy of
 the master branch is up-to-date with respect to the remote origin's branch and remote upstream's
