@@ -103,7 +103,7 @@ Acquiring a Fork of the Recycle Repository
 
 A fork is *your* copy of Recycle. Github offers an excellent
 `tutorial <http://help.github.com/fork-a-repo/>`_ on how to set one up. The rest of this
-example assumes you have set up the "upstream" repository as ``recycle/core``. Note that git
+example assumes you have set up the "upstream" repository as ``cyclus/recycle``. Note that git
 refers to your fork as "origin".
 
 First, let's make our "work" branch:
