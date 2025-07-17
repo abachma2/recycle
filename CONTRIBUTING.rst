@@ -103,13 +103,18 @@ Acquiring a Fork of the Recycle Repository
 
 A fork is *your* copy of Recycle. Github offers an excellent
 `tutorial <http://help.github.com/fork-a-repo/>`_ on how to set one up. The rest of this
-example assumes you have set up the "upstream" repository as ``cyclus/recycle``. Note that git
-refers to your fork as "origin".
+example assumes you have set up the "upstream" repository as ``cyclus/core``. Note that git
+refers to your fork as "origin". When you `clone your fork <https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository>`_, it will create a directory on your machine called ``recycle``. 
+Go into this directory:
+::
+
+  .../$ cd recycle
+  .../recycle/$ 
 
 First, let's make our "work" branch:
 ::
-    .../recycle_dir/$ git branch work
-    .../recycle_dir/$ git push origin work
+    .../recycle/$ git branch work
+    .../recycle/$ git push origin work
 
 We now have the following situation: there exists the "blessed" copy of the Master and
 Develop branches, there exists your fork's copy of the Master, Develop, and Work branches,
@@ -128,14 +133,14 @@ work, finished, and successfully pushed your changes to your *Origin*
 repository. You are now at home and want to continue working a bit. To begin,
 let's update our *home's local branches*.  ::
 
-    .../recycle_dir/$ git checkout master
-    .../recycle_dir/$ git pull upstream master
-    .../recycle_dir/$ git push origin master
+    .../recycle/$ git checkout master
+    .../recycle/$ git pull upstream master
+    .../recycle/$ git push origin master
 
-    .../recycle_dir/$ git checkout work
-    .../recycle_dir/$ git pull origin work
-    .../recycle_dir/$ git rebase master
-    .../recycle_dir/$ git push origin work
+    .../recycle/$ git checkout work
+    .../recycle/$ git pull origin work
+    .../recycle/$ git rebase master
+    .../recycle/$ git push origin work
 
 Perhaps a little explanation is required. We first want to make sure that this new local copy of
 the master branch is up-to-date with respect to the remote origin's branch and remote upstream's
