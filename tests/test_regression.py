@@ -4,14 +4,13 @@ import uuid
 import sqlite3
 import platform
 
+import pytest
 import tables
 import numpy as np
 from numpy.testing import assert_array_almost_equal
 from numpy.testing import assert_almost_equal
 from cyclus.lib import Env
 
-from nose.plugins.skip import SkipTest
-from nose.tools import assert_equal, assert_true
 
 
 import helper
@@ -24,7 +23,7 @@ ALLOW_MILPS = Env().allow_milps
 def skip_if_dont_allow_milps():
     """A don't run certain tests if MILPs are disabled."""
     if not ALLOW_MILPS:
-        raise SkipTest("Cyclus was compiled without MILPS support or the "
+        pytest.skip("Cyclus was compiled without MILPS support or the "
                        "ALLOW_MILPS env var was not set to true.")
 
 
