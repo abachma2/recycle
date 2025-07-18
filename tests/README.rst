@@ -1,4 +1,4 @@
-Cyclus/Cycamore Regression Tests
+Cyclus/Recycle Regression Tests
 ================================
 
 Dependencies
@@ -14,15 +14,12 @@ To run the regression tests from the recyle/tests:
 
 .. code-block:: bash
 
-  $ nosetests
+  $ pytest
 
 Regression Test Coverage
 ========================
 
-Regression tests currently cover the ``AgentEntry``, ``Info``, and
-``Transaction`` tables for the cases in ``input/physor``. ``AgentId``s are not
-checked directly against each database, rather a tuple of uniquely identifying
-(from the ``AgentEntry`` table) information is used.
+Regression tests currently cover the 
 
 New Releases
 ------------
@@ -82,15 +79,3 @@ Finally, feel free to clean up after yourself
 .. code-block:: bash
 
   $ rm *.h5
-
-Nondeterminisitic Analysis
-==========================
-
-An `analysis` python module can assist in analyzing the determinism of Cyclus
-output. It does so by running the regression tests some number of times and
-analyzing the frequency of nondeterminism of output tables and columns within
-those tables. See the module's help: 
-
-.. code-block:: python
-
-  $ python analysis.py -h
